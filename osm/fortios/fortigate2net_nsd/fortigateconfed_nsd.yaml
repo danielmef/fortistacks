@@ -1,0 +1,37 @@
+nsd:nsd-catalog:
+    nsd:nsd:
+    -   nsd:constituent-vnfd:
+        -   nsd:member-vnf-index: '1'
+            nsd:start-by-default: 'true'
+            nsd:vnfd-id-ref: fortios-solo-vnfd
+        nsd:id: a530bb31-bcbd-493c-a0be-fc16e390413b
+        nsd:name: Fortios
+        nsd:vld:
+        -   nsd:id: vld-1
+            nsd:mgmt-network: 'true'
+            nsd:name: vld-1
+            nsd:vnfd-connection-point-ref:
+            -   nsd:member-vnf-index-ref: '1'
+                nsd:vnfd-connection-point-ref: fortios/mgmt
+                nsd:vnfd-id-ref: fortios-solo-vnfd
+        -   nsd:id: vld-2
+            nsd:mgmt-network: 'false'
+            nsd:name: vld-2
+            nsd:vnfd-connection-point-ref:
+            -   nsd:member-vnf-index-ref: '1'
+                nsd:vnfd-connection-point-ref: fortios/cp1
+                nsd:vnfd-id-ref: fortios-solo-vnfd
+        -   nsd:id: vld-3
+            nsd:mgmt-network: 'false'
+            nsd:name: vld-3
+            nsd:vnfd-connection-point-ref:
+            -   nsd:member-vnf-index-ref: '1'
+                nsd:vnfd-connection-point-ref: fortios/cp2
+                nsd:vnfd-id-ref: fortios-solo-vnfd
+        -   nsd:id: vld-4
+            nsd:mgmt-network: 'false'
+            nsd:name: vld-4
+            nsd:vnfd-connection-point-ref:
+            -   nsd:member-vnf-index-ref: '1'
+                nsd:vnfd-connection-point-ref: fortios/cp3
+                nsd:vnfd-id-ref: fortios-solo-vnfd

@@ -1,0 +1,3 @@
+paramiko>=1.16.0,<1.17
+fortiosapi>=0.9.9
+
