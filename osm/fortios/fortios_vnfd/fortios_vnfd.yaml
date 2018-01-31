@@ -73,14 +73,19 @@ vnfd:vnfd-catalog:
         vnfd:vendor: Fortinet
         vnfd:version: 5.6.3
         vnfd:vnf-configuration:
-            juju:
-                charm: fortios
-            config-primitive:
-            -   name: sshcmd
-                parameter:
-                -   name: commands
-                    data-type: STRING
-                    default-value: 'config firewall policy  \n  edit 3  \n  set srcintf
-                        port2  \n   set dstintf port3  \n  set srcaddr all  \n  set
-                        dstaddr all \n  set action accept \n  set schedule always
-                        \n  set service DNS \n  set logtraffic all \n  next \n  end'
+            vnfd:juju:
+                vnfd:charm: fortios
+            vnfd:initial-config-primitive:
+            -   vnfd:seq: 1
+                vnfd:name: config
+                vnfd:parameter:
+                -   vnfd:name: hostname
+                    vnfd:value: <rw_mgmt_ip>
+                -   vnfd:name: user
+                    vnfd:value: admin
+            vnfd:config-primitive:
+            -   vnfd:name: sshcmd
+                vnfd:parameter:
+                -   vnfd:name: commands
+                    vnfd:data-type: string
+                    vnfd:default-value: ''
