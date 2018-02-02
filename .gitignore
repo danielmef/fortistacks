@@ -2,3 +2,6 @@
 .idea/
 builds/
 deps/
+devops
+*_nsd.tar.gz
+*_vnfd.tar.gz
