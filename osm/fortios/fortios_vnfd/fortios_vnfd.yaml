@@ -79,10 +79,12 @@ vnfd:vnfd-catalog:
             -   vnfd:seq: 1
                 vnfd:name: config
                 vnfd:parameter:
-                -   vnfd:name: hostname
+                -   vnfd:name: ssh-hostname
                     vnfd:value: <rw_mgmt_ip>
-                -   vnfd:name: user
+                -   vnfd:name: ssh-username
                     vnfd:value: admin
+                -   vnfd:name: ssh-password
+                    vnfd:value: ''
             vnfd:config-primitive:
             -   vnfd:name: sshcmd
                 vnfd:parameter:
